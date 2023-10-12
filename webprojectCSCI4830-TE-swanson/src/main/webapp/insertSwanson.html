@@ -1,0 +1,67 @@
+<html>
+<head>
+<style>
+header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:12px;	 
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1> Insert Game Data </h1>
+</header>
+
+<nav>
+<a href="/webprojectCSCI4830-TE-swanson/searchSwanson.html">Search Games</a> <br>
+</nav>
+
+<section>
+	<h1>Insert Game Data</h1>
+	
+	<form action="InsertSwanson" method="POST">
+	
+		Game Title: <input type="text" name="gameTitle"> <br />
+		Game Rating: <input type="text" name="gameRating"> <br />
+		Game Year: <input type="text" name="gameYear"> <br />
+		Game Genre: <input type="text" name="gameGenre"> <br />
+		Singleplayer: <input type="text" name="singleplayer"> <br />
+		Multiplayer: <input type="text" name="multiplayer"> <br />
+		Xbox: <input type="text" name="xbox"> <br />
+		PC: <input type="text" name="pc"> <br />
+		PlayStation: <input type="text" name="playStation"> <br />
+		Nintendo Switch: <input type="text" name="ninSwitch"> <br />
+		
+		<input type="submit" value="Submit" />
+	</form>
+
+</section>
+
+<footer>
+Copyright
+</footer>
+</body>
+</html>

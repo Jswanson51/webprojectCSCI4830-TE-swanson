@@ -29,9 +29,9 @@ public class InsertSwanson extends HttpServlet {
       String singleplayer = request.getParameter("singleplayer");
       String multiplayer = request.getParameter("multiplayer");
       String xbox = request.getParameter("xbox");
-      String pc = request.getParameter("PC");
+      String pc = request.getParameter("pc");
       String playStation = request.getParameter("playStation");
-      String ninSwitch = request.getParameter("switch");
+      String ninSwitch = request.getParameter("ninSwitch");
       
       Connection connection = null;
       String insertSql = " INSERT INTO MyTableSwansonTE (id, GAMETITLE, GAMERATING, GAMEYEAR, GAMEGENRE, SINGLEPLAYER, MULTIPLAYER, XBOX, PC, PLAYSTATION, SWITCH) values (default, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -81,7 +81,7 @@ public class InsertSwanson extends HttpServlet {
             
             "</ul>\n");
 
-      out.println("<a href=/webprojectCSCI4830-TE-swanson/search_swanson.html>Search Data</a> <br>");
+      out.println("<a href=/webprojectCSCI4830-TE-swanson/searchSwanson.html>Search Data</a> <br>");
       out.println("</body></html>");
    }
 

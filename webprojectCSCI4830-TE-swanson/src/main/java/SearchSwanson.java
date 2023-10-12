@@ -64,11 +64,11 @@ public class SearchSwanson extends HttpServlet {
             String xbox = rs.getString("xbox").trim();
             String pc = rs.getString("pc").trim();
             String playStation = rs.getString("playstation").trim();
-            String ninSwitch = rs.getString("ninswitch").trim();
+            String ninSwitch = rs.getString("Switch").trim();
             
             if (keyword.isEmpty() || gameGenre.contains(keyword)) {
                out.println("Entry: " + id + ", ");
-               out.println("Game Tile: " + gameTitle + ", ");
+               out.println("Game Title: " + gameTitle + ", ");
                out.println("Game Rating: " + gameRating + ", ");
                out.println("Game Year: " + gameYear + ", ");
                out.println("Game Genre: " + gameGenre);
@@ -80,7 +80,7 @@ public class SearchSwanson extends HttpServlet {
                out.println("Nintendo Switch: " + ninSwitch + "<br>");
             }
          }
-         out.println("<a href=/webprojectCSCI4830-TE-swanson/search_swanson.html>Search Data</a> <br>");
+         out.println("<a href=/webprojectCSCI4830-TE-swanson/searchSwanson.html>Search Data</a> <br>");
          out.println("</body></html>");
          rs.close();
          preparedStatement.close();
