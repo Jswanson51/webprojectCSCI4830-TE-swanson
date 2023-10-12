@@ -2,18 +2,24 @@
 <head>
 <style>
 header {
-    background-color:black;
-    color:white;
+    background-color:rgb(0, 255, 128);
+    height: 100px;
+    width: 450px;
+    color:rgb(0, 0, 128);
     text-align:center;
-    padding:12px;	 
+    background-position: center;
+    padding:12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;	 
 }
+
 nav {
     line-height:30px;
-    background-color:#eeeeee;
-    height:300px;
+    background-color:rgb(192, 192, 192);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height:35px;
     width:100px;
-    float:left;
-    padding:5px;	      
+    float:right 50px;
+    padding:15px;	      
 }
 section {
     width:350px;
@@ -21,8 +27,8 @@ section {
     padding:10px;	 	 
 }
 footer {
-    background-color:black;
-    color:white;
+    background-color:rgb(0, 0, 128);
+    color:rgb(0, 255, 0);
     clear:both;
     text-align:center;
     padding:5px;	 	 
@@ -43,25 +49,27 @@ footer {
 	<h1>Insert Game Data</h1>
 	
 	<form action="InsertSwanson" method="POST">
-	
-		Game Title: <input type="text" name="gameTitle"> <br />
-		Game Rating: <input type="text" name="gameRating"> <br />
-		Game Year: <input type="text" name="gameYear"> <br />
-		Game Genre: <input type="text" name="gameGenre"> <br />
-		Singleplayer: <input type="text" name="singleplayer"> <br />
-		Multiplayer: <input type="text" name="multiplayer"> <br />
-		Xbox: <input type="text" name="xbox"> <br />
-		PC: <input type="text" name="pc"> <br />
-		PlayStation: <input type="text" name="playStation"> <br />
-		Nintendo Switch: <input type="text" name="ninSwitch"> <br />
 		
-		<input type="submit" value="Submit" />
+		
+		Game Title: <input type="text" name="gameTitle" placeholder="ex: Minecraft"> <br />
+		Game Rating: <input type="text" name="gameRating" placeholder="ex: Everyone"> <br />
+		Game Year: <input type="text" name="gameYear" placeholder="ex: 2011"> <br />
+		Game Genre: <input type="text" name="gameGenre" placeholder="ex: Sandbox"> <br />
+		Singleplayer: <input type="radio" name="singleplayer" value="Yes"> Yes<br />
+		<input type="radio" name="singleplayer" value="No" > No<br />
+		Multiplayer: <input type="radio" name="multiplayer" value="Yes"> Yes<br /> <input type="radio" name="multiplayer" value="No" > No<br />
+		Xbox: <input type="radio" name="xbox" value="Yes"> Yes<br /> <input type="radio" name="xbox" value="No" > No<br />
+		PC: <input type="radio" name="pc" value="Yes"> Yes<br /> <input type="radio" name="pc" value="No" > No<br />
+		PlayStation: <input type="radio" name="playStation" value="Yes"> Yes<br /> <input type="radio" name="playStation" value="No" > No<br />
+		Nintendo Switch: <input type="radio" name="ninSwitch" value="Yes"> Yes<br /> <input type="radio" name="ninSwitch" value="No" > No<br />
+		
+		<input type="submit" value="Submit"/>
 	</form>
 
 </section>
 
 <footer>
-Copyright
+Tech Exercise
 </footer>
 </body>
 </html>
