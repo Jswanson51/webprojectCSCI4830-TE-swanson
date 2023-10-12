@@ -27,14 +27,19 @@ public class SearchSwanson extends HttpServlet {
    void search(String keyword, HttpServletResponse response) throws IOException {
       response.setContentType("text/html");
       PrintWriter out = response.getWriter();
-      String title = "Database Result";
+      String title = "You Should Try These Games:";
       String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + //
             "transitional//en\">\n"; //
       out.println(docType + //
             "<html>\n" + //
             "<head><title>" + title + "</title></head>\n" + //
+            "<style>\n" +
+            "body { font-family: Arial, sans-serif; }\n" +
+            "h1 { font-family: 'Times New Roman', serif; }\n" +
+            "ul { list-style-type: disc; text-align: left; }\n" +
+            "</style>\n" +
             "<body bgcolor=\"#f0f0f0\">\n" + //
-            "<h1 align=\"center\">" + title + "</h1>\n");
+            "<h1 align=\"left\">" + title + "</h1>\n");
 
       Connection connection = null;
       PreparedStatement preparedStatement = null;
@@ -67,17 +72,17 @@ public class SearchSwanson extends HttpServlet {
             String ninSwitch = rs.getString("Switch").trim();
             
             if (keyword.isEmpty() || gameGenre.contains(keyword)) {
-               out.println("Entry: " + id + ", ");
-               out.println("Game Title: " + gameTitle + ", ");
-               out.println("Game Rating: " + gameRating + ", ");
-               out.println("Game Year: " + gameYear + ", ");
-               out.println("Game Genre: " + gameGenre);
-               out.println("Singleplayer?: " + singleplayer + ", ");
-               out.println("Multiplayer?: " + multiplayer + ", ");
-               out.println("Xbox: " + xbox + ", ");
-               out.println("PC: " + pc + ", ");
-               out.println("PlayStation: " + playStation + ", ");
-               out.println("Nintendo Switch: " + ninSwitch + "<br>");
+               out.println("Suggestion ID: " + id + ", " + "<br>");
+               out.println("Game Title: " + gameTitle + ", " + "<br>");
+               out.println("Game Rating: " + gameRating + ", " + "<br>");
+               out.println("Game Year: " + gameYear + ", " + "<br>");
+               out.println("Game Genre: " + gameGenre + ", " + "<br>");
+               out.println("Singleplayer?: " + singleplayer + ", " + "<br>");
+               out.println("Multiplayer?: " + multiplayer + ", " + "<br>");
+               out.println("Xbox: " + xbox + ", " + "<br>");
+               out.println("PC: " + pc + ", " + "<br>");
+               out.println("PlayStation: " + playStation + ", " + "<br>");
+               out.println("Nintendo Switch: " + ninSwitch + "<br>" + "<br>");
             }
          }
          out.println("<a href=/webprojectCSCI4830-TE-swanson/searchSwanson.html>Search Data</a> <br>");

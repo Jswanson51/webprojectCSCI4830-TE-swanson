@@ -2,38 +2,46 @@
 <head>
 <style>
 header {
-    background-color:rgb(128, 0, 255);
-    color:white;
+    background-color:rgb(0, 255, 128);
+    height: 100px;
+    width: 450px;
+    color:rgb(0, 0, 128);
     text-align:center;
-    padding:5px;	 
+    background-position: center;
+    padding:12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;	 
 }
+
 nav {
     line-height:30px;
-    background-color:#eeeeee;
-    height:300px;
+    background-color:rgb(192, 192, 192);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height:35px;
     width:100px;
-    float:left;
-    padding:5px;	      
+    float:right 50px;
+    padding:15px;	      
 }
 section {
     width:350px;
+    height: 150px;
+    text-align: center;
     float:left;
-    padding:10px;	 	 
+    height: 250px;
+    padding:50px;	 	 
 }
 footer {
-    background-color:black;
-    color:white;
+    background-color:rgb(0, 0, 128);
+    color:rgb(0, 255, 0);
     clear:both;
     text-align:center;
     padding:5px;	 	 
 }
-
 </style>
 </head>
 
 <body>
 <header>
-<h1> Get Game Reccomendations </h1>
+<h1> Get Game Reccomendations! </h1>
 </header>
 
 <nav>
@@ -41,11 +49,11 @@ footer {
 </nav>
 
 <section>
-	<h1>User Input</h1>
+	<h1>Search Games</h1>
 	
 	<form action="SearchSwanson" method="POST">
 	
-		Search Games: <input type="text" name="keyword"> <br />
+		Game Genre: <input type="text" name="keyword"> <br />
 		
 		<input type="submit" value="Search" />
 	</form>
@@ -53,7 +61,7 @@ footer {
 </section>
 
 <footer>
-
+Tech Exercise
 </footer>
 </body>
 </html>
