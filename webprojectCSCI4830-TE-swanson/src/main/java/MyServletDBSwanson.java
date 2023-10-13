@@ -25,7 +25,7 @@ public class MyServletDBSwanson extends HttpServlet {
 
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       response.setContentType("text/html;charset=UTF-8");
-      response.getWriter().println("-------- MySQL JDBC Connection Testing ------------<br>");
+   
       try {
          Class.forName("com.mysql.cj.jdbc.Driver");//("com.mysql.jdbc.Driver");
       } catch (ClassNotFoundException e) {
@@ -33,7 +33,7 @@ public class MyServletDBSwanson extends HttpServlet {
          e.printStackTrace();
          return;
       }
-      response.getWriter().println("MySQL JDBC Driver Registered!<br>");
+      
       connection = null;
       try {
          connection = DriverManager.getConnection(url, user, password);
@@ -43,15 +43,13 @@ public class MyServletDBSwanson extends HttpServlet {
          return;
       }
       if (connection != null) {
-         response.getWriter().println("You made it, take control your database now!<br>");
+    	  response.getWriter().println("<h2>All Games in Database:</h2><br>");
       } else {
          System.out.println("Failed to make connection!");
       }
       try {
          String selectSQL = "SELECT * FROM MyTableSwansonTE";
         
-         response.getWriter().println(selectSQL + "<br>");
-         response.getWriter().println("------------------------------------------<br>");
          PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
          
          ResultSet rs = preparedStatement.executeQuery();
@@ -67,7 +65,7 @@ public class MyServletDBSwanson extends HttpServlet {
         	 String pc = rs.getString("PC");
         	 String playStation = rs.getString("PLAYSTATION"); 
         	 String ninSwitch = rs.getString("SWITCH"); 
-        	 response.getWriter().append("ENTRY ID: " + id + ", "); 
+        	 response.getWriter().append("<p style=\"font-family:georgia\">ENTRY ID: " + id + ", "); 
         	 response.getWriter().append("GAME TITLE: " + gameTitle + ", "); 
         	 response.getWriter().append("GAME RATING: " + gameRating + ", "); 
         	 response.getWriter().append("GAME YEAR: " + gameYear + ", "); 

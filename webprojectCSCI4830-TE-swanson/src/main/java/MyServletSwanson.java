@@ -1,6 +1,8 @@
 
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +29,14 @@ public class MyServletSwanson extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Hello World! Welcome to the Video Game Recomendation Database.");
+		response.getWriter().append("<h1>Hello World! Welcome to the Video Game Recomendation Database.</h1>");
+		response.setContentType("text/html");
+	      PrintWriter out = response.getWriter();
+	     
+	      out.println("<a href=/webprojectCSCI4830-TE-swanson/searchSwanson.html>Search Games</a> <br>");
+	      out.println("</body></html>");
+	      out.println("<a href=/webprojectCSCI4830-TE-swanson/insertSwanson.html>Suggest Games</a> <br>");
+	      out.println("</body></html>");
 	}
 
 	/**

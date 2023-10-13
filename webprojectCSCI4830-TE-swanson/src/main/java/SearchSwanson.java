@@ -72,20 +72,20 @@ public class SearchSwanson extends HttpServlet {
             String ninSwitch = rs.getString("Switch").trim();
             
             if (keyword.isEmpty() || gameGenre.contains(keyword)) {
-               out.println("Suggestion ID: " + id + ", " + "<br>");
-               out.println("Game Title: " + gameTitle + ", " + "<br>");
-               out.println("Game Rating: " + gameRating + ", " + "<br>");
-               out.println("Game Year: " + gameYear + ", " + "<br>");
-               out.println("Game Genre: " + gameGenre + ", " + "<br>");
-               out.println("Singleplayer?: " + singleplayer + ", " + "<br>");
-               out.println("Multiplayer?: " + multiplayer + ", " + "<br>");
-               out.println("Xbox: " + xbox + ", " + "<br>");
-               out.println("PC: " + pc + ", " + "<br>");
-               out.println("PlayStation: " + playStation + ", " + "<br>");
-               out.println("Nintendo Switch: " + ninSwitch + "<br>" + "<br>");
+               out.println("<b>Suggestion ID: </b>" + id + "<br>");
+               out.println("<b>Game Title: </b>" + gameTitle + "<br>");
+               out.println("<b>Game Rating: </b>" + gameRating + "<br>");
+               out.println("<b>Game Year: </b>" + gameYear + "<br>");
+               out.println("<b>Game Genre: </b>" + gameGenre + "<br>");
+               out.println("<b>Singleplayer?: </b>" + singleplayer + "<br>");
+               out.println("<b>Multiplayer?: </b>" + multiplayer + "<br>");
+               out.println("<b>Xbox: </b>" + xbox + "<br>");
+               out.println("<b>PC: </b>" + pc + "<br>");
+               out.println("<b>PlayStation: </b>" + playStation + "<br>");
+               out.println("<b>Nintendo Switch: </b>" + ninSwitch + "<br>" + "<br>");
             }
          }
-         out.println("<a href=/webprojectCSCI4830-TE-swanson/searchSwanson.html>Search Data</a> <br>");
+         out.println("<a href=/webprojectCSCI4830-TE-swanson/searchSwanson.html>Search Games</a> <br>");
          out.println("</body></html>");
          rs.close();
          preparedStatement.close();

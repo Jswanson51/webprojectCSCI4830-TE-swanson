@@ -59,7 +59,7 @@ public class InsertSwanson extends HttpServlet {
       // Set response content type
       response.setContentType("text/html");
       PrintWriter out = response.getWriter();
-      String title = "Insert Game Info into DB Table";
+      String title = "Review Game Suggestion Data:";
       String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + "transitional//en\">\n";
       out.println(docType + //
             "<html>\n" + //
@@ -67,7 +67,7 @@ public class InsertSwanson extends HttpServlet {
             "<body bgcolor=\"#f0f0f0\">\n" + //
             "<h2 align=\"center\">" + title + "</h2>\n" + //
             "<ul>\n" + //
-
+            
             "  <li><b>Game Title</b>: " + gameTitle + "\n" + //
             "  <li><b>Game Rating</b>: " + gameRating + "\n" + //
             "  <li><b>Game Year</b>: " + gameYear + "\n" + //
@@ -81,7 +81,7 @@ public class InsertSwanson extends HttpServlet {
             
             "</ul>\n");
 
-      out.println("<a href=/webprojectCSCI4830-TE-swanson/searchSwanson.html>Search Data</a> <br>");
+      out.println("<a href=/webprojectCSCI4830-TE-swanson/searchSwanson.html>Search Games</a> <br>");
       out.println("</body></html>");
    }
 
